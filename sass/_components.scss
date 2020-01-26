@@ -356,3 +356,76 @@
         box-shadow: none;
     }
 }
+
+
+
+///////////////////////////////////////////////////
+//Paragraph
+
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+
+///////////////////////////////////////////////////
+//List
+
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: 1px solid var(--color-grey-light-2);
+    border-bottom: 1px solid var(--color-grey-light-2);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item{
+        flex: 0 0 50%;
+    }
+
+    &__item::before{
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: .5rem;
+        // old browsers 
+    //    background-image: url(../img/chevron.svg);
+    //    background-size: cover;
+       // new browsers
+       background-color: var(--color-primary);
+       -webkit-mask-image: url(../img/chevron.svg);
+       -webkit-mask-size: cover;
+       -webkit-mask-image: url(../img/chevron.svg);
+       mask-size: cover;
+    }
+}
+
+
+///////////////////////////////////////////////////
+//Recommend
+
+.recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+
+    display: flex;
+    align-items: center;
+
+    &__count{
+         margin-right: auto;
+    }
+
+    &__photo {
+        box-sizing: content-box;
+        border: 3px solid #fff;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+    }
+
+    &__photo:not(:last-child) {
+        margin-right: -1.5rem;
+    }
+}
